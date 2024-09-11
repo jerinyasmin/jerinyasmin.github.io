@@ -3,39 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
+    <title>Your Name - Researcher</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
+            background-color: #f5f5f5;
         }
         header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 0;
-        }
-        main {
+            background-color: #2c3e50;
             padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #ecf0f1;
+            padding: 15px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            width: 70%;
+            margin-left: 5%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
         footer {
-            background-color: #f1f1f1;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
             padding: 10px;
             margin-top: 20px;
+            position: relative;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Personal Webpage!</h1>
-    </header>
-    <main>
-        <p>Hello, I'm <strong>Your Name</strong>. Welcome to my personal website. I'm a [your profession] passionate about [something you love].</p>
-        <p>This is where I share my projects, ideas, and thoughts!</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Name</p>
-    </footer>
+
+<header>
+    <h1>Dr. Your Name</h1>
+    <p>Researcher in [Your Field] - Specializing in [Your Specialization]</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+    <div class="sidebar">
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#research">Research Interests</a></li>
+            <li><a href="#publications">Key Publications</a></li>
+            <li><a href="#contact">Contact Information</a></li>
+        </ul>
+        <h2>External Links</h2>
+        <ul>
+            <li><a href="#">Google Scholar Profile</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">ResearchGate</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my research webpage! I am Dr. [Your Name], a researcher specializing in [Your Field]. My work focuses on [Your Research Focus], and I have a passion for discovering new insights in [Your Specialization].</p>
+        </section>
+
+        <section id="research">
+            <h2>Research Interests</h2>
+            <p>My research interests include:</p>
+            <ul>
+                <li>Topic 1: Brief description of topic 1.</li>
+                <li>Topic 2: Brief description of topic 2.</li>
+                <li>Topic 3: Brief description of topic 3.</li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <ul>
+                <li>Paper 1: Title, Journal, Year. [<a href="#">Link to paper</a>]</li>
+                <li>Paper 2: Title, Journal, Year. [<a href="#">Link to paper</a>]</li>
+                <li>Paper 3: Title, Journal, Year. [<a href="#">Link to paper</a>]</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>You can reach me at:</p>
+            <p>Email: <a href="mailto:yourname@university.edu">yourname@university.edu</a></p>
+            <p>Office: Building/Room, University Name</p>
+        </section>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Dr. Your Name - All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
