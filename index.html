@@ -4,50 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerin Yasmin - Researcher</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
         }
         header {
             background-color: #2c3e50;
+            color: white;
+            text-align: center;
             padding: 20px;
-            text-align: center;
-            color: white;
+            margin-bottom: 20px;
         }
-        nav {
-            background-color: #34495e;
-            padding: 10px;
-            text-align: center;
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Roboto', sans-serif;
         }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: 300;
         }
         .container {
             display: flex;
+            justify-content: center;
             padding: 20px;
-            margin-top: 20px;
-        }
-        .sidebar {
-            width: 25%;
-            background-color: #ecf0f1;
-            padding: 15px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
         .content {
-            width: 70%;
-            margin-left: 5%;
+            width: 80%;
             background-color: white;
             padding: 20px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         footer {
             background-color: #2c3e50;
@@ -55,81 +48,111 @@
             text-align: center;
             padding: 10px;
             margin-top: 20px;
-            position: relative;
         }
-        h1, h2, h3 {
+        h2 {
             color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            font-family: 'Roboto', sans-serif;
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .highlight {
+            background-color: #dff0d8;
+            border-left: 5px solid #3c763d;
+            padding: 10px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        em {
+            color: #555;
+            font-style: italic;
+        }
+        strong {
+            color: #333;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Jerin Yasmin</h1>
-    <p>Researcher in [Your Field] - Specializing in [Your Specialization]</p>
+    <h1>Welcome to Jerin Yasmin's Research Page</h1>
+    <p>PhD Student at Queen’s University - Specializing in Software Engineering for AI (SE4AI)</p>
 </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-<!--     <a href="#contact">Contact</a>
-</nav> -->
-
 <div class="container">
-    <div class="sidebar">
-        <h2>Quick Links</h2>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#research">Research Interests</a></li>
-            <li><a href="#publications">Key Publications</a></li>
-            <li><a href="#contact">Contact Information</a></li>
-        </ul>
-        <h2>External Links</h2>
-        <ul>
-            <li><a href="#">Google Scholar Profile</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">ResearchGate</a></li>
-        </ul>
-    </div>
-
     <div class="content">
         <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my research webpage! I am Dr. [Your Name], a researcher specializing in [Your Field]. My work focuses on [Your Research Focus], and I have a passion for discovering new insights in [Your Specialization].</p>
-        </section>
-
-        <section id="research">
-            <h2>Research Interests</h2>
-            <p>My research interests include:</p>
-            <ul>
-                <li>Topic 1: Brief description of topic 1.</li>
-                <li>Topic 2: Brief description of topic 2.</li>
-                <li>Topic 3: Brief description of topic 3.</li>
-            </ul>
+            <p>Hello! I am Jerin Yasmin, a PhD student at Queen’s University, Canada. My research focuses on software engineering for AI (SE4AI), working on understanding and improving data and ML workflows in software systems. I am interested in AI4SE, Mining Software Repositories, and Software Maintenance and Evolution. My work has been featured in top-tier software engineering conferences such as ICSME, ICPC, and MSR. Before pursuing my graduate studies at Queen’s, I gained industry experience in backend architecture, web services development, and security enhancements.</p>
         </section>
 
         <section id="publications">
-            <h2>Selected Publications</h2>
+            <h2>Publications</h2>
+
             <ul>
-                <li>Paper 1: Title, Journal, Year. [<a href="#">Link to paper</a>]</li>
-                <li>Paper 2: Title, Journal, Year. [<a href="#">Link to paper</a>]</li>
-                <li>Paper 3: Title, Journal, Year. [<a href="#">Link to paper</a>]</li>
+             <li>
+                <strong>An Empirical Study of Developers' Challenges in Implementing Workflows as Code: A Case Study on Apache Airflow</strong><br>
+                J. Yasmin<br>
+                <em>Journal of Systems and Software (JSS), 2024</em>
+              </li>
+              <li>
+                <strong>Peatmoss: A Dataset and Initial Analysis of Pre-trained Models in Open-source Software</strong><br>
+                W. Jiang, J. Yasmin, J. Jones, N. Synovic, J. Kuo, N. Bielanski, Y. Tian, ...<br>
+                <em>2024 IEEE/ACM 21st International Conference on Mining Software Repositories (MSR)</em>
+              </li>
+
+              <li>
+                <strong>A First Look at Duplicate and Near-duplicate Self-admitted Technical Debt Comments</strong><br>
+                J. Yasmin, M.S. Sheikhaei, Y. Tian<br>
+                <em>Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension (ICPC), 2022</em><br>
+                <div class="highlight">Achieved the Best Early Research Achievement Paper Award in 2022.</div>
+              </li>
+
+              <li>
+                <strong>RESTful API Deprecation: An Empirical Study on Deprecation Practices and a Method for Detecting Deprecated API Usages in Client-side Web Applications</strong><br>
+                J. Yasmin<br>
+                <em>Queen's University (Canada), 2021</em>
+              </li>
+
+              <li>
+                <strong>Effects of Pre-trained Word Embeddings on Text-based Deception Detection</strong><br>
+                J. Yasmin, D. Nam, F. Zulkernine<br>
+                <em>IEEE International Conference on Pervasive and Intelligent Computation, 2020</em>
+              </li>
+
+              <li>
+                <strong>A First Look at the Deprecation of RESTful APIs: An Empirical Study</strong><br>
+                J. Yasmin, Y. Tian, J. Yang<br>
+                <em>The International Conference on Software Maintenance and Evolution (ICSME), 2020</em>
+              </li>
             </ul>
         </section>
 
-<!--         <section id="contact">
-            <h2>Contact Information</h2>
-            <p>You can reach me at:</p>
-            <p>Email: <a href="mailto:yourname@university.edu">yourname@university.edu</a></p>
-            <p>Office: Building/Room, University Name</p> -->
+        <section id="awards">
+            <h2>Academic Awards</h2>
+            <ul>
+                <li>R.S McLaughlin Fellowship</li>
+                <li>Queen's Graduate Award</li>
+                <li>Ontario Graduate Scholarship</li>
+            </ul>
+        </section>
+
+        <section id="service">
+            <h2>Service</h2>
+            <p><strong>PC Committee:</strong> 2024 Workshop on Human Centric Software Engineering and Cyber Security</p>
+            <p><strong>Sub-reviewer:</strong></p>
+            <ul>
+                <li>International Conference on Automated Software Engineering (ASE) 2022, 2024</li>
+                <li>International Conference on Software Security and Reliability (QRS) 2020, 2021</li>
+                <li>International Conference on Mining Software Repositories (MSR) 2024</li>
+                <li>International Conference on Software Engineering (ICSE) 2025</li>
+            </ul>
         </section>
     </div>
 </div>
