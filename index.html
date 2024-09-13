@@ -12,23 +12,57 @@
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
+            scroll-behavior: smooth; /* Smooth scrolling */
         }
         header {
             background-color: #2c3e50;
             color: white;
-            text-align: center;
             padding: 20px;
             margin-bottom: 20px;
+            position: relative;
+        }
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
             font-family: 'Roboto', sans-serif;
+            padding-left: 150px; /* Adjusted to make space for the image */
         }
         header p {
-            margin: 0;
+            margin: 5px 0 0 150px;
             font-size: 1.2em;
             font-weight: 300;
+        }
+        nav {
+            margin-top: 15px;
+            padding-left: 150px; /* Align with image */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
         }
         .container {
             display: flex;
@@ -82,13 +116,21 @@
 <body>
 
 <header>
-    <h2>Welcome to Jerin's Research Page</h2>
-<!--     <p>PhD Student at Queen’s University - Specializing in Software Engineering for AI (SE4AI)</p>-->
-</header> 
+    <img src="img.png" alt="Jerin Yasmin">
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#service">Service</a></li>
+        </ul>
+    </nav>
+</header>
 
 <div class="container">
     <div class="content">
         <section id="about">
+            <h2>About</h2>
             <p>Hello! I am Jerin Yasmin, a PhD student at Queen’s University, Canada. My research focuses on software engineering for AI (SE4AI), working on understanding and improving data and ML workflows in software systems. I am interested in AI4SE, Mining Software Repositories, and Software Maintenance and Evolution. My work has been featured in top-tier software engineering conferences such as ICSME, ICPC, and MSR. Before pursuing my graduate studies at Queen’s, I gained industry experience in backend architecture, web services development, and security enhancements.</p>
         </section>
 
@@ -96,42 +138,37 @@
             <h2>Publications</h2>
 
             <ul>
-             <li>
-                <strong>An Empirical Study of Developers' Challenges in Implementing Workflows as Code: A Case Study on Apache Airflow</strong><br>
-                J. Yasmin, J. Wang, Y. Tian, B. Adams<br>
-                <em>Journal of Systems and Software (JSS), 2024</em>
-
-              </li>
-              <li>
-                <strong>Peatmoss: A Dataset and Initial Analysis of Pre-trained Models in Open-source Software</strong><br>
-                W. Jiang, J. Yasmin, J. Jones, N. Synovic, J. Kuo, N. Bielanski, Y. Tian, ...<br>
-                <em>2024 IEEE/ACM 21st International Conference on Mining Software Repositories (MSR)</em>
-              </li>
-
-              <li>
-                <strong>A First Look at Duplicate and Near-duplicate Self-admitted Technical Debt Comments</strong><br>
-                J. Yasmin, M.S. Sheikhaei, Y. Tian<br>
-                <em>Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension (ICPC), 2022</em><br>
-                <div class="highlight">Achieved the Best Early Research Achievement Paper Award in 2022.</div>
-              </li>
-
-              <li>
-                <strong>RESTful API Deprecation: An Empirical Study on Deprecation Practices and a Method for Detecting Deprecated API Usages in Client-side Web Applications</strong><br>
-                J. Yasmin<br>
-                <em>Queen's University (Canada), 2021</em>
-              </li>
-
-              <li>
-                <strong>Effects of Pre-trained Word Embeddings on Text-based Deception Detection</strong><br>
-                J. Yasmin, D. Nam, F. Zulkernine<br>
-                <em>IEEE International Conference on Pervasive and Intelligent Computation, 2020</em>
-              </li>
-
-              <li>
-                <strong>A First Look at the Deprecation of RESTful APIs: An Empirical Study</strong><br>
-                J. Yasmin, Y. Tian, J. Yang<br>
-                <em>The International Conference on Software Maintenance and Evolution (ICSME), 2020</em>
-              </li>
+                <li>
+                    <strong>An Empirical Study of Developers' Challenges in Implementing Workflows as Code: A Case Study on Apache Airflow</strong><br>
+                    J. Yasmin, J. Wang, Y. Tian, B. Adams<br>
+                    <em>Journal of Systems and Software (JSS), 2024</em>
+                </li>
+                <li>
+                    <strong>Peatmoss: A Dataset and Initial Analysis of Pre-trained Models in Open-source Software</strong><br>
+                    W. Jiang, J. Yasmin, J. Jones, N. Synovic, J. Kuo, N. Bielanski, Y. Tian, ...<br>
+                    <em>2024 IEEE/ACM 21st International Conference on Mining Software Repositories (MSR)</em>
+                </li>
+                <li>
+                    <strong>A First Look at Duplicate and Near-duplicate Self-admitted Technical Debt Comments</strong><br>
+                    J. Yasmin, M.S. Sheikhaei, Y. Tian<br>
+                    <em>Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension (ICPC), 2022</em><br>
+                    <div class="highlight">Achieved the Best Early Research Achievement Paper Award in 2022.</div>
+                </li>
+                <li>
+                    <strong>RESTful API Deprecation: An Empirical Study on Deprecation Practices and a Method for Detecting Deprecated API Usages in Client-side Web Applications</strong><br>
+                    J. Yasmin<br>
+                    <em>Queen's University (Canada), 2021</em>
+                </li>
+                <li>
+                    <strong>Effects of Pre-trained Word Embeddings on Text-based Deception Detection</strong><br>
+                    J. Yasmin, D. Nam, F. Zulkernine<br>
+                    <em>IEEE International Conference on Pervasive and Intelligent Computation, 2020</em>
+                </li>
+                <li>
+                    <strong>A First Look at the Deprecation of RESTful APIs: An Empirical Study</strong><br>
+                    J. Yasmin, Y. Tian, J. Yang<br>
+                    <em>The International Conference on Software Maintenance and Evolution (ICSME), 2020</em>
+                </li>
             </ul>
         </section>
 
