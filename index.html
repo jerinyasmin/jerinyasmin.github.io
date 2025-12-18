@@ -20,15 +20,14 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.7;
             scroll-behavior: smooth;
         }
 
-        /* --- Header --- */
+        /* --- Header & Socials --- */
         header {
             background-color: var(--section-bg);
             border-bottom: 1px solid #eee;
@@ -37,8 +36,7 @@
         }
 
         header img {
-            width: 150px;
-            height: 150px;
+            width: 150px; height: 150px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid #f0f0f0;
@@ -61,8 +59,7 @@
         }
 
         .social-links {
-            display: flex;
-            gap: 25px;
+            display: flex; gap: 25px;
             justify-content: center;
             font-size: 1.6em;
         }
@@ -73,19 +70,15 @@
             transition: all 0.3s ease;
         }
 
-        .social-links a:hover {
-            transform: translateY(-3px);
-        }
-
+        .social-links a:hover { transform: translateY(-3px); }
         .fa-graduation-cap:hover { color: #4285F4; }
         .fa-linkedin:hover { color: #0077B5; }
         .fa-github:hover { color: #333; }
         .fa-envelope:hover { color: var(--accent-color); }
 
-        /* --- Sticky Navigation --- */
+        /* --- Navigation --- */
         nav {
-            position: sticky;
-            top: 0;
+            position: sticky; top: 0;
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
             z-index: 1000;
@@ -94,12 +87,8 @@
         }
 
         nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
+            list-style: none; padding: 0; margin: 0;
+            display: flex; justify-content: center; gap: 30px;
         }
 
         nav ul li a {
@@ -109,14 +98,11 @@
             font-size: 0.85em;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            transition: color 0.3s;
         }
 
-        nav ul li a:hover {
-            color: var(--accent-color);
-        }
+        nav ul li a:hover { color: var(--accent-color); }
 
-        /* --- Main Content --- */
+        /* --- Layout --- */
         .container {
             max-width: 850px;
             margin: 40px auto;
@@ -134,101 +120,64 @@
         h2 {
             font-family: 'Merriweather', serif;
             color: var(--primary-color);
-            margin-top: 0;
             border-bottom: 2px solid #f0f0f0;
             padding-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            display: flex; align-items: center; gap: 12px;
         }
 
-        h2 i { font-size: 0.8em; color: var(--accent-color); }
-
-        /* --- News Section --- */
-        .news-box {
-            background: #f1f8e9;
-            border-left: 4px solid var(--accent-color);
-            padding: 15px 20px;
-            font-size: 0.95em;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 20px;
-        }
-
-        /* --- Publication & BibTeX --- */
-        .pub-item { margin-bottom: 30px; }
-
-        .pub-title {
-            font-weight: 700;
-            display: block;
-            color: #222;
-            margin-bottom: 5px;
-        }
-
-        .cite-btn {
-            background: none;
-            border: 1px solid var(--accent-color);
+        h3 {
+            font-size: 1.1em;
             color: var(--accent-color);
-            padding: 3px 10px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: all 0.2s;
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .cite-btn:hover {
-            background: var(--accent-color);
-            color: white;
+        /* --- Publications & BibTeX --- */
+        .pub-item { margin-bottom: 25px; font-size: 0.95em; }
+        .pub-id { font-weight: bold; color: var(--accent-color); margin-right: 5px; }
+        .author-me { font-weight: 700; text-decoration: underline; }
+        
+        .cite-btn {
+            background: none; border: 1px solid #ddd;
+            color: #777; padding: 2px 8px;
+            border-radius: 4px; font-size: 0.75em;
+            cursor: pointer; margin-top: 5px;
         }
+        .cite-btn:hover { border-color: var(--accent-color); color: var(--accent-color); }
 
         .bibtex-box {
-            display: none;
-            background: #f9f9f9;
-            padding: 15px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.8em;
-            margin-top: 10px;
-            border-radius: 5px;
-            white-space: pre;
-            overflow-x: auto;
-            border: 1px dashed #ddd;
-            color: #444;
+            display: none; background: #f9f9f9;
+            padding: 15px; font-family: monospace;
+            font-size: 0.8em; margin-top: 10px;
+            border-radius: 5px; border: 1px dashed #ccc;
+            white-space: pre-wrap;
         }
 
-        .award-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .award-list li {
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .award-badge {
+            background: #fdf2f2; color: #9b2c2c;
+            padding: 2px 8px; border-radius: 4px;
+            font-size: 0.8em; font-weight: bold;
+            margin-left: 10px;
         }
 
         footer {
-            text-align: center;
-            padding: 60px 20px;
-            color: #999;
-            font-size: 0.9em;
-            border-top: 1px solid #eee;
+            text-align: center; padding: 40px;
+            color: #999; font-size: 0.85em;
         }
 
-        /* Mobile Adjustments */
         @media (max-width: 600px) {
-            header h1 { font-size: 1.8em; }
-            nav ul { gap: 15px; }
-            section { padding: 25px; }
+            nav ul { gap: 10px; font-size: 0.7em; }
+            section { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="img.png" alt="Jerin Yasmin">
+    <!-- <img src="img.png" alt="Jerin Yasmin"> -->
     <h1>Jerin Yasmin</h1>
-    <p class="subtitle">PhD Student in Software Engineering @ Queen’s University <br> Specializing in SE4AI, ML Workflows, and Mining Software Repositories.</p>
+    <p class="subtitle">PhD Student in Software Engineering @ Queen’s University <br> Focusing on SE4AI, ML Workflows, and Repository Mining.</p>
     
     <div class="social-links">
         <a href="https://scholar.google.com/citations?user=4sXMBW4AAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
@@ -250,62 +199,75 @@
 <div class="container">
     
     <section id="about">
-        <h2><i class="fa-solid fa-user-graduate"></i> About</h2>
-        <div class="news-box">
-            <strong><i class="fa-solid fa-bullhorn"></i> News:</strong> Our paper on Maven Ecosystem dynamics was accepted to <strong>MSR 2025</strong>! 
-        </div>
-        <p>Hello! I am <strong>Jerin Yasmin</strong>, a PhD student at <strong>Queen’s University, Canada</strong>. My research focuses on software engineering for AI (SE4AI), specifically understanding and improving data and ML workflows.</p>
-        <p>I am passionate about AI4SE, Mining Software Repositories, and Software Maintenance. Previously, I gained industry experience in backend architecture and security enhancements.</p>
+        <h2><i class="fa-solid fa-user"></i> About</h2>
+        <p>I am a PhD student at <strong>Queen’s University</strong>. My research interests include <strong>Software Engineering for AI (SE4AI)</strong>, Mining Software Repositories, and Software Maintenance.</p>
+        <p>My work aims to understand the challenges developers face when implementing complex ML workflows and managing software dependencies in the era of pre-trained models.</p>
     </section>
 
     <section id="publications">
-        <h2><i class="fa-solid fa-book"></i> Publications</h2>
+        <h2><i class="fa-solid fa-book-open"></i> Publications</h2>
         
+        <h3>Journal Articles</h3>
         <div class="pub-item">
-            <span class="pub-title">Understanding Abandonment and Slowdown Dynamics in the Maven Ecosystem</span>
-            J. Yasmin<br>
-            <em>MSR 2025 (Mining Challenge-track)</em>
-            <br>
-            <button class="cite-btn" onclick="toggleBib('bib1')"><i class="fa-solid fa-quote-left"></i> BibTeX</button>
-            <div id="bib1" class="bibtex-box">@inproceedings{yasmin2025maven,
-  title={Understanding Abandonment and Slowdown Dynamics in the Maven Ecosystem},
-  author={Yasmin, Jerin},
-  booktitle={22nd IEEE/ACM International Conference on Mining Software Repositories (MSR)},
+            <span class="pub-id">J1.</span> <span class="author-me">Yasmin, Jerin</span>, Jiang, W., Davis, J. C. & Tian, Y. 
+            <strong>Software Dependencies 2.0: An Empirical Study of Reuse and Integration of Pre-Trained Models in Open-Source Projects.</strong> 
+            <em>arXiv:2509.06085 (2025). Under Review - EMSE.</em>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-id">J2.</span> <span class="author-me">Yasmin, Jerin</span>, Wang, J. A., Tian, Y. & Adams, B. 
+            <strong>An empirical study of developers’ challenges in implementing Workflows as Code: A case study on Apache Airflow.</strong> 
+            <em>Journal of Systems and Software 219, 112248 (2025).</em>
+            <button class="cite-btn" onclick="toggleBib('bibJ2')">BibTeX</button>
+            <div id="bibJ2" class="bibtex-box">@article{yasmin2025airflow,
+  title={An empirical study of developers’ challenges in implementing Workflows as Code: A case study on Apache Airflow},
+  author={Yasmin, Jerin and Wang, J and Tian, Y and Adams, B},
+  journal={Journal of Systems and Software},
+  volume={219},
+  pages={112248},
   year={2025}
 }</div>
         </div>
 
+        <h3>Conference Articles</h3>
         <div class="pub-item">
-            <span class="pub-title">An Empirical Study of Developers' Challenges in Implementing Workflows as Code: A Case Study on Apache Airflow</span>
-            J. Yasmin, J. Wang, Y. Tian, B. Adams<br>
-            <em>Journal of Systems and Software (JSS), 2024</em>
-            <br>
-            <button class="cite-btn" onclick="toggleBib('bib2')"><i class="fa-solid fa-quote-left"></i> BibTeX</button>
-            <div id="bib2" class="bibtex-box">@article{yasmin2024airflow,
-  title={An Empirical Study of Developers' Challenges in Implementing Workflows as Code: A Case Study on Apache Airflow},
-  author={Yasmin, J. and Wang, J. and Tian, Y. and Adams, B.},
-  journal={Journal of Systems and Software},
-  year={2024}
-}</div>
+            <span class="pub-id">C1.</span> Hasan, K. A., <span class="author-me">Yasmin, Jerin</span>, et al. 
+            <strong>Understanding abandonment and slowdown dynamics in the Maven ecosystem.</strong> 
+            <em>MSR 2025, 354–358.</em>
         </div>
 
         <div class="pub-item">
-            <span class="pub-title">A First Look at Duplicate and Near-duplicate Self-admitted Technical Debt Comments</span>
-            J. Yasmin, M.S. Sheikhaei, Y. Tian<br>
-            <em>ICPC 2022</em>
-            <br>
-            <div style="background: #e8f5e9; padding: 5px 10px; border-radius: 5px; font-size: 0.9em; display: inline-block; color: #2e7d32; margin-top: 5px;">
-                <i class="fa-solid fa-award"></i> Best Early Research Achievement Paper Award
-            </div>
+            <span class="pub-id">C2.</span> Jiang, W., <span class="author-me">Yasmin, Jerin</span>, et al. 
+            <strong>Peatmoss: A dataset and initial analysis of pre-trained models in open-source software.</strong> 
+            <em>MSR 2024, 431–443.</em>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-id">C3.</span> <span class="author-me">Yasmin, Jerin</span>, Sheikhaei, M. S. & Tian, Y. 
+            <strong>A first look at duplicate and near-duplicate self-admitted technical debt comments.</strong> 
+            <em>ICPC 2022, 614–618.</em> <span class="award-badge">Best Paper Award</span>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-id">C4.</span> <span class="author-me">Yasmin, Jerin</span>, Nam, D. & Zulkernine, F. 
+            <strong>Effects of pre-trained word embeddings on text-based deception detection.</strong> 
+            <em>IEEE DASC/PiCom/CBDCom/CyberSciTech 2020, 437–443.</em>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-id">C5.</span> <span class="author-me">Yasmin, Jerin</span>, Tian, Y. & Yang, J. 
+            <strong>A first look at the deprecation of RESTful APIs: An empirical study.</strong> 
+            <em>ICSME 2020, 151–161.</em>
         </div>
     </section>
 
     <section id="awards">
-        <h2><i class="fa-solid fa-medal"></i> Awards</h2>
-        <ul class="award-list">
+        <h2><i class="fa-solid fa-trophy"></i> Awards</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li><i class="fa-solid fa-star" style="color: gold;"></i> Best Paper Award - ICPC 2022</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--accent-color);"></i> Ontario Graduate Scholarship (OGS)</li>
             <li><i class="fa-solid fa-circle-check" style="color: var(--accent-color);"></i> R.S McLaughlin Fellowship</li>
             <li><i class="fa-solid fa-circle-check" style="color: var(--accent-color);"></i> Queen's Graduate Award</li>
-            <li><i class="fa-solid fa-circle-check" style="color: var(--accent-color);"></i> Ontario Graduate Scholarship (OGS)</li>
         </ul>
     </section>
 
@@ -318,17 +280,13 @@
 </div>
 
 <footer>
-    <p>&copy; 2025 Jerin Yasmin • Built with Inter & Merriweather</p>
+    <p>&copy; 2025 Jerin Yasmin • Queen's University, Canada</p>
 </footer>
 
 <script>
     function toggleBib(id) {
         var x = document.getElementById(id);
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
+        x.style.display = (x.style.display === "block") ? "none" : "block";
     }
 </script>
 
