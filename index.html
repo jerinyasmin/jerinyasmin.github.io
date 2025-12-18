@@ -4,112 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerin Yasmin - Researcher</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #556b2f; 
+            --bg-color: #fcfcfc;
+            --section-bg: #ffffff;
+            --text-color: #333;
+            --light-text: #666;
+        }
+
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            scroll-behavior: smooth; /* Smooth scrolling */
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            scroll-behavior: smooth;
         }
+
+        /* --- Header --- */
         header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            position: relative;
+            background-color: var(--section-bg);
+            border-bottom: 1px solid #eee;
+            padding: 60px 20px;
+            text-align: center;
         }
+
         header img {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
+            object-fit: cover;
+            border: 5px solid #f0f0f0;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
+
         header h1 {
-            margin: 0;
+            margin: 10px 0;
+            font-family: 'Merriweather', serif;
             font-size: 2.5em;
-            font-family: 'Roboto', sans-serif;
-            padding-left: 150px; /* Adjusted to make space for the image */
+            color: var(--primary-color);
         }
-        header p {
-            margin: 5px 0 0 150px;
-            font-size: 1.2em;
-            font-weight: 300;
+
+        .subtitle {
+            font-size: 1.1em;
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto 25px auto;
         }
+
+        .social-links {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            font-size: 1.6em;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        .fa-graduation-cap:hover { color: #4285F4; }
+        .fa-linkedin:hover { color: #0077B5; }
+        .fa-github:hover { color: #333; }
+        .fa-envelope:hover { color: var(--accent-color); }
+
+        /* --- Sticky Navigation --- */
         nav {
-            margin-top: 15px;
-            padding-left: 150px; /* Align with image */
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
         }
+
         nav ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            gap: 20px;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        .container {
             display: flex;
             justify-content: center;
-            padding: 20px;
+            gap: 40px;
         }
-        .content {
-            width: 80%;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: color 0.3s;
         }
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
+
+        nav ul li a:hover {
+            color: var(--accent-color);
         }
+
+        /* --- Main Content --- */
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--section-bg);
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+
         h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 5px;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Merriweather', serif;
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        ul {
-            list-style-type: none;
+
+        h2 i { font-size: 0.8em; color: var(--accent-color); }
+
+        /* --- News Section --- */
+        .news-box {
+            background: #f1f8e9;
+            border-left: 4px solid var(--accent-color);
+            padding: 15px 20px;
+            font-size: 0.95em;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+        }
+
+        /* --- Publication & BibTeX --- */
+        .pub-item { margin-bottom: 30px; }
+
+        .pub-title {
+            font-weight: 700;
+            display: block;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .cite-btn {
+            background: none;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.2s;
+        }
+
+        .cite-btn:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .bibtex-box {
+            display: none;
+            background: #f9f9f9;
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8em;
+            margin-top: 10px;
+            border-radius: 5px;
+            white-space: pre;
+            overflow-x: auto;
+            border: 1px dashed #ddd;
+            color: #444;
+        }
+
+        .award-list {
+            list-style: none;
             padding: 0;
         }
-        li {
-            margin-bottom: 15px;
+
+        .award-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .highlight {
-            background-color: #dff0d8;
-            border-left: 5px solid #3c763d;
-            padding: 10px;
-            margin: 10px 0;
-            font-weight: bold;
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
         }
-        em {
-            color: #555;
-            font-style: italic;
-        }
-        strong {
-            color: #333;
-            font-weight: 600;
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8em; }
+            nav ul { gap: 15px; }
+            section { padding: 25px; }
         }
     </style>
 </head>
@@ -117,109 +227,110 @@
 
 <header>
     <img src="img.png" alt="Jerin Yasmin">
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#awards">Awards</a></li>
-            <li><a href="#service">Service</a></li>
-        </ul>
-    </nav>
+    <h1>Jerin Yasmin</h1>
+    <p class="subtitle">PhD Student in Software Engineering @ Queen’s University <br> Specializing in SE4AI, ML Workflows, and Mining Software Repositories.</p>
+    
+    <div class="social-links">
+        <a href="https://scholar.google.com/citations?user=4sXMBW4AAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+        <a href="https://www.linkedin.com/in/jerinyasmin/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/jerinyasmin" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:j.yasmin@queensu.ca" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
 </header>
 
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#service">Service</a></li>
+    </ul>
+</nav>
+
 <div class="container">
-    <div class="content">
-        <section id="about">
-            <h2>About</h2>
-            <p>Hello! I am Jerin Yasmin, a PhD student at Queen’s University, Canada. My research focuses on software engineering for AI (SE4AI), working on understanding and improving data and ML workflows in software systems. I am interested in AI4SE, Mining Software Repositories, and Software Maintenance and Evolution. My work has been featured in top-tier software engineering conferences such as ICSME, ICPC, and MSR. Before pursuing my graduate studies at Queen’s, I gained industry experience in backend architecture, web services development, and security enhancements.</p>
-        </section>
+    
+    <section id="about">
+        <h2><i class="fa-solid fa-user-graduate"></i> About</h2>
+        <div class="news-box">
+            <strong><i class="fa-solid fa-bullhorn"></i> News:</strong> Our paper on Maven Ecosystem dynamics was accepted to <strong>MSR 2025</strong>! 
+        </div>
+        <p>Hello! I am <strong>Jerin Yasmin</strong>, a PhD student at <strong>Queen’s University, Canada</strong>. My research focuses on software engineering for AI (SE4AI), specifically understanding and improving data and ML workflows.</p>
+        <p>I am passionate about AI4SE, Mining Software Repositories, and Software Maintenance. Previously, I gained industry experience in backend architecture and security enhancements.</p>
+    </section>
 
     <section id="publications">
-    <h2>Publications</h2>
-    <ul>
-        <li>
-            <strong>An Empirical Study of Developers' Challenges in Implementing Workflows as Code: A Case Study on Apache Airflow</strong><br>
+        <h2><i class="fa-solid fa-book"></i> Publications</h2>
+        
+        <div class="pub-item">
+            <span class="pub-title">Understanding Abandonment and Slowdown Dynamics in the Maven Ecosystem</span>
+            J. Yasmin<br>
+            <em>MSR 2025 (Mining Challenge-track)</em>
+            <br>
+            <button class="cite-btn" onclick="toggleBib('bib1')"><i class="fa-solid fa-quote-left"></i> BibTeX</button>
+            <div id="bib1" class="bibtex-box">@inproceedings{yasmin2025maven,
+  title={Understanding Abandonment and Slowdown Dynamics in the Maven Ecosystem},
+  author={Yasmin, Jerin},
+  booktitle={22nd IEEE/ACM International Conference on Mining Software Repositories (MSR)},
+  year={2025}
+}</div>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-title">An Empirical Study of Developers' Challenges in Implementing Workflows as Code: A Case Study on Apache Airflow</span>
             J. Yasmin, J. Wang, Y. Tian, B. Adams<br>
             <em>Journal of Systems and Software (JSS), 2024</em>
-        </li>
-        <li>
-            <strong>Peatmoss: A Dataset and Initial Analysis of Pre-trained Models in Open-source Software</strong><br>
-            W. Jiang, J. Yasmin, J. Jones, N. Synovic, J. Kuo, N. Bielanski, Y. Tian, ...<br>
-            <em>2024 IEEE/ACM 21st International Conference on Mining Software Repositories (MSR)</em>
-        </li>
-        <li>
-            <strong>Understanding Abandonment and Slowdown Dynamics in the Maven Ecosystem</strong><br>
-            J. Yasmin<br>
-            <em>2025 IEEE/ACM 22nd International Conference on Mining Software Repositories (MSR) - Mining Challenge-track</em>
-        </li>
-        <li>
-            <strong>A First Look at Duplicate and Near-duplicate Self-admitted Technical Debt Comments</strong><br>
+            <br>
+            <button class="cite-btn" onclick="toggleBib('bib2')"><i class="fa-solid fa-quote-left"></i> BibTeX</button>
+            <div id="bib2" class="bibtex-box">@article{yasmin2024airflow,
+  title={An Empirical Study of Developers' Challenges in Implementing Workflows as Code: A Case Study on Apache Airflow},
+  author={Yasmin, J. and Wang, J. and Tian, Y. and Adams, B.},
+  journal={Journal of Systems and Software},
+  year={2024}
+}</div>
+        </div>
+
+        <div class="pub-item">
+            <span class="pub-title">A First Look at Duplicate and Near-duplicate Self-admitted Technical Debt Comments</span>
             J. Yasmin, M.S. Sheikhaei, Y. Tian<br>
-            <em>Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension (ICPC), 2022</em><br>
-            <div class="highlight">Achieved the Best Early Research Achievement Paper Award in 2022.</div>
-        </li>
-        <li>
-            <strong>RESTful API Deprecation: An Empirical Study on Deprecation Practices and a Method for Detecting Deprecated API Usages in Client-side Web Applications</strong><br>
-            J. Yasmin<br>
-            <em>Queen's University (Canada), 2021</em>
-        </li>
-        <li>
-            <strong>Effects of Pre-trained Word Embeddings on Text-based Deception Detection</strong><br>
-            J. Yasmin, D. Nam, F. Zulkernine<br>
-            <em>IEEE International Conference on Pervasive and Intelligent Computation, 2020</em>
-        </li>
-        <li>
-            <strong>A First Look at the Deprecation of RESTful APIs: An Empirical Study</strong><br>
-            J. Yasmin, Y. Tian, J. Yang<br>
-            <em>The International Conference on Software Maintenance and Evolution (ICSME), 2020</em>
-        </li>
-    </ul>
-</section>
+            <em>ICPC 2022</em>
+            <br>
+            <div style="background: #e8f5e9; padding: 5px 10px; border-radius: 5px; font-size: 0.9em; display: inline-block; color: #2e7d32; margin-top: 5px;">
+                <i class="fa-solid fa-award"></i> Best Early Research Achievement Paper Award
+            </div>
+        </div>
+    </section>
 
-<section id="awards">
-    <h2>Academic Awards</h2>
-    <ul>
-        <li>R.S McLaughlin Fellowship</li>
-        <li>Queen's Graduate Award</li>
-        <li>Ontario Graduate Scholarship</li>
-    </ul>
-</section>
+    <section id="awards">
+        <h2><i class="fa-solid fa-medal"></i> Awards</h2>
+        <ul class="award-list">
+            <li><i class="fa-solid fa-circle-check" style="color: var(--accent-color);"></i> R.S McLaughlin Fellowship</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--accent-color);"></i> Queen's Graduate Award</li>
+            <li><i class="fa-solid fa-circle-check" style="color: var(--accent-color);"></i> Ontario Graduate Scholarship (OGS)</li>
+        </ul>
+    </section>
 
-<section id="service">
-    <h2>Service</h2>
-    <p><strong>PC Committee:</strong></p>
-    <ul>
-        <li>2024 Workshop on Human Centric Software Engineering and Cyber Security</li>
-        <li>2025 International Conference on Mining Software Repositories (MSR) - Technical Papers (Junior PC-track)</li>
-        <li>2025 International Conference on Mining Software Repositories (MSR) - Mining Challenge (Program Committee)</li>
-        <li>2025 IEEE International Conference on Software Analysis, Evolution, and Reengineering (SANER) - Research Papers (Program Committee)</li>
-    </ul>
-    
-    <p><strong>Journal Reviewer:</strong></p>
-    <ul>
-        <li>ACM Transactions on Knowledge Discovery from Data (TKDD)</li>
-    </ul>
+    <section id="service">
+        <h2><i class="fa-solid fa-handshake-angle"></i> Service</h2>
+        <p><strong>PC Member:</strong> MSR '25, SANER '25, HuC '24</p>
+        <p><strong>Reviewer:</strong> ACM TKDD, ICSE '25, ASE '24, QRS '21</p>
+    </section>
 
-    <p><strong>Rapid Reviewer:</strong></p>
-    <ul>
-        <li>2025 Mining Software Repositories (MSR) - Data and Tool Showcase</li>
-    </ul>
-
-    <p><strong>Sub-reviewer:</strong></p>
-    <ul>
-        <li>International Conference on Automated Software Engineering (ASE) 2022, 2024</li>
-        <li>International Conference on Software Security and Reliability (QRS) 2020, 2021</li>
-        <li>International Conference on Mining Software Repositories (MSR) 2024</li>
-        <li>International Conference on Software Engineering (ICSE) 2025</li>
-    </ul>
-</section>
-
-    </div>
 </div>
 
 <footer>
-    <p>© 2024 Jerin Yasmin - All Rights Reserved.</p>
+    <p>&copy; 2025 Jerin Yasmin • Built with Inter & Merriweather</p>
 </footer>
+
+<script>
+    function toggleBib(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
 
 </body>
 </html>
