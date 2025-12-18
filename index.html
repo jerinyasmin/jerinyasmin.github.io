@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jerin Yasmin - PhD Researcher & Software Engineer</title>
+    <title>Jerin Yasmin - Researcher</title>
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,7 +16,6 @@
             --section-bg: #ffffff;
             --text-color: #333;
             --light-text: #666;
-            --border-color: #eee;
         }
 
         body {
@@ -28,34 +27,32 @@
             scroll-behavior: smooth;
         }
 
-        /* --- Header & Navigation --- */
         header {
             background-color: var(--section-bg);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid #eee;
             padding: 60px 20px;
             text-align: center;
         }
 
         header img {
-            width: 160px; height: 160px;
+            width: 150px; height: 150px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid #f0f0f0;
             margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         header h1 {
             margin: 10px 0;
             font-family: 'Merriweather', serif;
-            font-size: 2.6em;
+            font-size: 2.5em;
             color: var(--primary-color);
         }
 
         .subtitle {
-            font-size: 1.15em;
+            font-size: 1.1em;
             color: var(--light-text);
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto 25px auto;
         }
 
@@ -66,23 +63,20 @@
         }
 
         .social-links a { color: var(--primary-color); transition: 0.3s; }
-        .social-links a:hover { transform: translateY(-3px); }
-        .fa-graduation-cap:hover { color: #4285F4; }
-        .fa-linkedin:hover { color: #0077B5; }
-        .fa-github:hover { color: #333; }
+        .social-links a:hover { transform: translateY(-3px); color: var(--accent-color); }
 
         nav {
             position: sticky; top: 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid #eee;
             padding: 12px 0;
         }
 
         nav ul {
             list-style: none; padding: 0; margin: 0;
-            display: flex; justify-content: center; gap: 20px;
+            display: flex; justify-content: center; gap: 25px;
             flex-wrap: wrap;
         }
 
@@ -95,9 +89,6 @@
             letter-spacing: 1px;
         }
 
-        nav ul li a:hover { color: var(--accent-color); }
-
-        /* --- Content Layout --- */
         .container {
             max-width: 900px;
             margin: 40px auto;
@@ -122,11 +113,9 @@
         }
 
         h2 i { font-size: 0.8em; color: var(--accent-color); }
-        h3 { font-size: 1.1em; color: var(--accent-color); text-transform: uppercase; margin-top: 25px; }
+        h3 { font-size: 1.1em; color: var(--accent-color); margin-top: 30px; }
 
-        /* --- Components --- */
-        .pub-item, .exp-item { margin-bottom: 20px; font-size: 0.95em; }
-        .item-id { font-weight: bold; color: var(--accent-color); margin-right: 5px; }
+        .item { margin-bottom: 20px; font-size: 0.95em; }
         .author-me { font-weight: 700; text-decoration: underline; }
         
         .cite-btn {
@@ -141,22 +130,20 @@
             border: 1px dashed #ccc; white-space: pre-wrap;
         }
 
-        .badge {
-            background: #f1f8e9; color: #33691e;
+        .award-badge {
+            background: #fdf2f2; color: #9b2c2c;
             padding: 2px 8px; border-radius: 4px;
-            font-size: 0.8em; font-weight: bold;
-        }
-
-        .tag {
-            display: inline-block; background: #eee; padding: 2px 8px;
-            border-radius: 15px; font-size: 0.75em; margin-right: 5px;
+            font-size: 0.8em; font-weight: bold; margin-left: 5px;
         }
 
         footer { text-align: center; padding: 40px; color: #999; font-size: 0.85em; }
 
+        ul.details-list { padding-left: 20px; }
+        ul.details-list li { margin-bottom: 8px; }
+
         @media (max-width: 600px) {
-            header h1 { font-size: 2em; }
             section { padding: 20px; }
+            nav ul { gap: 10px; }
         }
     </style>
 </head>
@@ -165,12 +152,12 @@
 <header>
     <!-- <img src="img.png" alt="Jerin Yasmin"> -->
     <h1>Jerin Yasmin</h1>
-    <p class="subtitle">PhD Researcher at <strong>Queen’s University</strong> <br> Specialized in SE4AI, ML Supply-Chain Transparency, and Software Evolution.</p>
+    <p class="subtitle">PhD Researcher @ Queen’s University <br> Software Engineering for AI | ML Workflows | Repository Mining</p>
     
     <div class="social-links">
-        <a href="https://scholar.google.com/citations?user=4sXMBW4AAAAJ&hl=en" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
-        <a href="https://www.linkedin.com/in/jerinyasmin/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/jerinyasmin" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=4sXMBW4AAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+        <a href="https://www.linkedin.com/in/jerinyasmin/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/jerinyasmin" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="mailto:j.yasmin@queensu.ca"><i class="fa-solid fa-envelope"></i></a>
     </div>
 </header>
@@ -188,88 +175,108 @@
 <div class="container">
     
     <section id="about">
-        <h2><i class="fa-solid fa-user-tie"></i> Research Overview</h2>
-        <p>I am a PhD Researcher at <strong>Rise Lab, Queen’s University</strong>, supervised by Dr. Yuan Tian. My research focuses on <strong>Software Engineering for AI (SE4AI)</strong>, particularly the reuse and integration of pre-trained models within Open-Source Software (OSS) ecosystems.</p>
-        <p>With over 10 years of experience as a Software Engineer, I bridge the gap between academic research and industrial practice in backend architecture and ML supply-chain transparency.</p>
+        <h2><i class="fa-solid fa-user"></i> About Me</h2>
+        <p>I am a PhD student at <strong>Queen’s University, Canada</strong>. My research focuses on software engineering for AI (SE4AI), working on understanding and improving data and ML workflows in software systems. I am interested in AI4SE, Mining Software Repositories, and Software Maintenance and Evolution.</p>
+        <p>Before pursuing my graduate studies at Queen’s, I gained extensive industry experience in backend architecture, web services development, and security enhancements.</p>
     </section>
 
     <section id="publications">
-        <h2><i class="fa-solid fa-file-lines"></i> Publications & Presentations</h2>
+        <h2><i class="fa-solid fa-book-open"></i> Publications</h2>
         
         <h3>Journal Articles</h3>
-        <div class="pub-item">
-            <span class="item-id">J1.</span> <span class="author-me">Yasmin, Jerin</span>, et al. "Software Dependencies 2.0: An Empirical Study of Reuse and Integration of Pre-Trained Models in OSS." <em>Under Review (EMSE)</em>, 2025.
+        <div class="item">
+            <span class="author-me">Yasmin, Jerin</span>, Jiang, W., Davis, J. C. & Tian, Y. Software Dependencies 2.0: An Empirical Study of Reuse and Integration of Pre-Trained Models in Open-Source Projects. arXiv preprint arXiv:2509.06085 (2025). Under Review - Empirical Software Engineering(EMSE).
         </div>
-        <div class="pub-item">
-            <span class="item-id">J2.</span> <span class="author-me">Yasmin, Jerin</span>, et al. "An empirical study of developers’ challenges in implementing Workflows as Code: Apache Airflow." <em>Journal of Systems and Software</em>, 2025.
-            <button class="cite-btn" onclick="toggleBib('bibJ2')">BibTeX</button>
-            <div id="bibJ2" class="bibtex-box">@article{yasmin2025airflow, author={Yasmin, Jerin and others}, journal={JSS}, year={2025}}</div>
+        <div class="item">
+            <span class="author-me">Yasmin, Jerin</span>, Wang, J. A., Tian, Y. & Adams, B. An empirical study of developers’ challenges in implementing Workflows as Code: A case study on Apache Airflow. Journal of Systems and Software 219, 112248 (2025).
         </div>
 
         <h3>Conference Articles</h3>
-        <div class="pub-item">
-            <span class="item-id">C1.</span> Hasan, K. A., <span class="author-me">Yasmin, Jerin</span>, et al. "Understanding abandonment and slowdown in Maven." <em>MSR 2025</em>.
+        <div class="item">
+            Hasan, K. A., <span class="author-me">Yasmin, Jerin</span>, Hao, H., Tian, Y., Hassan, S. & Ding, S. H. Understanding abandonment and slowdown dynamics in the Maven ecosystem in Proceedings of the 22nd IEEE/ACM International Conference on Mining Software Repositories (MSR) (2025), 354–358.
         </div>
-        <div class="pub-item">
-            <span class="item-id">C3.</span> <span class="author-me">Yasmin, Jerin</span>, et al. "Duplicate and near-duplicate SATD comments." <em>ICPC 2022</em>. <span class="badge">Best Paper Award</span>
+        <div class="item">
+            Jiang, W., <span class="author-me">Yasmin, Jerin</span>, Jones, J., Synovic, N., Kuo, J., Bielanski, N., Tian, Y., Thiruvathukal, G. K. & Davis, J. C. Peatmoss: A dataset and initial analysis of pre-trained models in open-source software in Proceedings of the 21st International Conference on Mining Software Repositories (2024), 431–443.
+        </div>
+        <div class="item">
+            <span class="author-me">Yasmin, Jerin</span>, Sheikhaei, M. S. & Tian, Y. A first look at duplicate and near-duplicate self-admitted technical debt comments in Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension (2022), 614–618. <span class="award-badge">Best Paper Award</span>
+        </div>
+        <div class="item">
+            <span class="author-me">Yasmin, Jerin</span>, Nam, D. & Zulkernine, F. Effects of pre-trained word embeddings on text-based deception detection in Proc. IEEE DASC/PiCom/CBDCom/CyberSciTech (2020), 437–443.
+        </div>
+        <div class="item">
+            <span class="author-me">Yasmin, Jerin</span>, Tian, Y. & Yang, J. A first look at the deprecation of RESTful APIs: An empirical study in 2020 IEEE International Conference on Software Maintenance and Evolution (ICSME) (2020), 151–161.
         </div>
 
-        <h3>Talks & Posters</h3>
-        <div class="pub-item">
-            <span class="item-id">P1.</span> <strong>Invited Talk:</strong> "Software Dependencies 2.0", CSER CASCON, 2025.
+        <h3>Presentations & Posters</h3>
+        <div class="item">
+            <strong>P1.</strong> <span class="author-me">Yasmin, Jerin</span>. Software Dependencies 2.0: An Empirical Study of Reuse and Integration of Pre-Trained Models in Open-Source Projects Invited Talk, Canadian Symposium on Software Engineering Research (CSER), CASCON. 2025.
         </div>
-        <div class="pub-item">
-            <span class="item-id">Poster1.</span> <strong>Poster:</strong> "AI Supply-Chain Analysis", CASCON 2025.
+        <div class="item">
+            <strong>P2.</strong> <span class="author-me">Yasmin, Jerin</span>. A first look at the deprecation of RESTful APIs: An empirical study, 2020 IEEE International Conference on Software Maintenance and Evolution (ICSME). 2020.
+        </div>
+        <div class="item">
+            <strong>P3.</strong> <span class="author-me">Yasmin, Jerin</span>. Effects of pre-trained word embeddings on text-based deception detection 2020 IEEE Intl Conf on Dependable, Autonomic and Secure Computing, Intl Conf on Pervasive Intelligence and Computing, Intl Conf on Cloud and Big Data Computing, Intl Conf on Cyber Science and Technology Congress (DASC/PiCom/CBDCom/CyberSciTech). 2020.
+        </div>
+
+        <div class="item">
+            <strong>Poster1.</strong> <span class="author-me">Yasmin, Jerin</span>. Software Dependencies 2.0: An Empirical Study of Reuse and Integration of Pre-Trained Models in Open-Source Projects Poster Presentation, CASCON 2025. 2025.
         </div>
     </section>
 
-    <section id="teaching">
-        <h2><i class="fa-solid fa-chalkboard-user"></i> Teaching</h2>
-        <div class="exp-item">
-            <strong>Teaching Fellow (2026 Appointed)</strong> | Queen's University
-            <br><small>ELEC 292: Introduction to Data Science</small>
-            <ul>
-                <li>Lecturing and designing assessments for undergraduate data science students.</li>
+    <!-- <section id="teaching">
+        <h2><i class="fa-solid fa-person-chalkboard"></i> Teaching</h2>
+        <div class="item">
+            <strong>Teaching Fellow, Queen’s University (Winter 2026 - Appointed)</strong>
+            <br>ELEC 292: Introduction to Data Science
+            <ul class="details-list">
+                <li>Deliver lectures and support laboratory activities.</li>
+                <li>Design assessments and supervise grading by graduate TAs.</li>
             </ul>
         </div>
-        <div class="exp-item">
-            <strong>Head Teaching Assistant (2021–2025)</strong> | Queen's University
-            <br><small>Neural & Genetic Computing, Advanced Data Analytics</small>
+        <div class="item">
+            <strong>Teaching Assistant and Head TA, Queen’s University (2021–2025)</strong>
+            <p>Supported courses including Advanced Data Analytics, Neural and Genetic Computing, and Topics in Information Systems.</p>
         </div>
-    </section>
+    </section> -->
 
     <section id="experience">
-        <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+        <h2><i class="fa-solid fa-laptop-code"></i> Professional Experience</h2>
         
         <h3>Research Experience</h3>
-        <div class="exp-item">
-            <strong>PhD Researcher</strong> | Rise Lab, Queen's University (2021–Present)
-            <br><em>Collaborators:</em> Purdue University, Concordia University, Loyola University.
+        <div class="item">
+            <strong>PhD Researcher</strong> | Rise Lab, Queen’s University (2021–Present)
+            <br>Advisor: Dr. Yuan Tian. Collaboration with Purdue, Concordia, and Industry partners.
         </div>
 
         <h3>Industry Experience</h3>
-        <div class="exp-item">
+        <div class="item">
             <strong>Senior Software Engineer</strong> | Cefalo Bangladesh Ltd. (2014–2019)
-            <br><small>Java, Spring, AWS, Microservices</small>
-            <p>Led backend development for NHST Media Group; managed large-scale CMS migrations.</p>
+            <br>Led backend system development and CMS migration for NHST Media Group.
         </div>
-        <div class="exp-item">
+        <div class="item">
             <strong>Software Engineer</strong> | Codemate Ltd. (2011–2014)
-            <br><small>PHP, Zend, Oracle 11g</small>
+            <br>Backend development for European clients, ERP systems, and automated testing.
+        </div>
+        <div class="item">
+            <strong>Software Engineer</strong> | TeestaIT (2009–2011)
+            <br>Developed CMS-based e-commerce platforms and UI features.
         </div>
     </section>
 
     <section id="service">
         <h2><i class="fa-solid fa-handshake-angle"></i> Academic Service</h2>
-        <p><strong>Program Committee:</strong> MSR '25 (Technical/Challenge), SANER '25.</p>
-        <p><strong>Reviewer:</strong> ACM TKDD, Empirical Software Engineering (EMSE).</p>
-        <p><strong>Sub-reviewer:</strong> ICSE '25, FSE '25, ASE '24, MSR '24.</p>
+        <ul class="details-list">
+            <li><strong>Program Committee:</strong> MSR 2025 (Challenge), SANER 2025.</li>
+            <li><strong>Journal Reviewer:</strong> ACM TKDD, Empirical Software Engineering (EMSE).</li>
+            <li><strong>Sub-reviewer:</strong> ICSE 2025, FSE 2025, ASE 2024, MSR 2024.</li>
+        </ul>
     </section>
 
 </div>
 
 <footer>
-    <p>&copy; 2025 Jerin Yasmin • Queen's University, Canada • Last Updated Dec 2025</p>
+    <p>&copy; 2025 Jerin Yasmin • Queen's University • Built with Passion</p>
 </footer>
 
 <script>
